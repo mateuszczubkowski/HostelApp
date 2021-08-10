@@ -180,6 +180,10 @@
     <Compile Include="Migrations\202108101718323_Seed.designer.cs">
       <DependentUpon>202108101718323_Seed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108101728327_UpdatedGuest.cs" />
+    <Compile Include="Migrations\202108101728327_UpdatedGuest.designer.cs">
+      <DependentUpon>202108101728327_UpdatedGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Guest.cs" />
@@ -275,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108101718323_Seed.resx">
       <DependentUpon>202108101718323_Seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108101728327_UpdatedGuest.resx">
+      <DependentUpon>202108101728327_UpdatedGuest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

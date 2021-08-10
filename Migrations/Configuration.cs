@@ -29,7 +29,11 @@
                 .RuleFor(g => g.SecondName, f => f.Name.LastName())
                 .RuleFor(g => g.Email, (f, g) => f.Internet.Email(g.FirstName, g.SecondName))
                 .RuleFor(g => g.BirthdayDate, f => f.Date.Between(new DateTime(1960, 1, 1), new DateTime(2001, 12, 31)).OrNull(f, .5f))
-                .RuleFor(g => g.PostalCode, f => f.Address.ZipCode().OrNull(f, .5f));
+                .RuleFor(g => g.PostalCode, f => f.Address.ZipCode().OrNull(f, .5f))
+                //After model update
+                .RuleFor(g => g.PhoneNumber, f => f.Person.Phone.OrNull(f, .6f))
+                .RuleFor(g => g.Address, f => f.Address.StreetAddress().OrNull(f, .5f))
+                .RuleFor(g => g.City, f => f.Address.City().OrNull(f, .5f));
 
             var reservationGenerator = new Faker<Reservation>()
                 .RuleFor(r => r.Id, f => Guid.NewGuid())
