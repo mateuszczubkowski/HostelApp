@@ -9,6 +9,11 @@ namespace HostelApp.Models
 {
     public class Reservation :BaseModel
     {
+        public Reservation()
+        {
+            this.Guests = new HashSet<Guest>();
+        }
+
         [Required]
         [MaxLength(10)]
         public string ReservationCode { get; set; }
@@ -24,6 +29,6 @@ namespace HostelApp.Models
         public CurrencyType CurrencyType { get; set; }
         public double? Commission { get; set; }
         public string Source { get; set; }
-        public virtual IEnumerable<Guest> Guests { get; set; }
+        public virtual ICollection<Guest> Guests { get; set; }
     }
 }

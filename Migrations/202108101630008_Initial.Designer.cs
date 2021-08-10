@@ -13,7 +13,7 @@ namespace HostelApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202108101615275_Initial"; }
+            get { return "202108101630008_Initial"; }
         }
         
         string IMigrationMetadata.Source

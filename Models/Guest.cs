@@ -8,6 +8,11 @@ namespace HostelApp.Models
 {
     public class Guest : BaseModel
     {
+        public Guest()
+        {
+            this.Reservations = new HashSet<Reservation>();
+        }
+
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -16,6 +21,6 @@ namespace HostelApp.Models
         public string Email { get; set; }
         public DateTime? BirthdayDate { get; set; }
         public string PostalCode { get; set; }
-        public virtual IEnumerable<Reservation> Reservations { get; set; }
+        public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }

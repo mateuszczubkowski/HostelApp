@@ -169,9 +169,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Enums\CurrencyType.cs" />
-    <Compile Include="Migrations\202108101615275_Initial.cs" />
-    <Compile Include="Migrations\202108101615275_Initial.designer.cs">
-      <DependentUpon>202108101615275_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202108101630008_Initial.cs" />
+    <Compile Include="Migrations\202108101630008_Initial.designer.cs">
+      <DependentUpon>202108101630008_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
@@ -263,8 +263,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108101615275_Initial.resx">
-      <DependentUpon>202108101615275_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108101630008_Initial.resx">
+      <DependentUpon>202108101630008_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
