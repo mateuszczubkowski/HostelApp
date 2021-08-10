@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=33.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>packages\Bogus.33.0.2\lib\net40\Bogus.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -173,6 +176,10 @@
     <Compile Include="Migrations\202108101630008_Initial.designer.cs">
       <DependentUpon>202108101630008_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108101718323_Seed.cs" />
+    <Compile Include="Migrations\202108101718323_Seed.designer.cs">
+      <DependentUpon>202108101718323_Seed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Guest.cs" />
@@ -265,6 +272,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202108101630008_Initial.resx">
       <DependentUpon>202108101630008_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108101718323_Seed.resx">
+      <DependentUpon>202108101718323_Seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
