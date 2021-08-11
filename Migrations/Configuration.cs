@@ -37,14 +37,14 @@
 
             var reservationGenerator = new Faker<Reservation>()
                 .RuleFor(r => r.Id, f => Guid.NewGuid())
-                .RuleFor(r => r.ReservationCode, f => f.Random.String(f.Random.Number(6, 10)))
+                .RuleFor(r => r.ReservationCode, f => f.Random.String2(f.Random.Int(6,10)))
                 .RuleFor(r => r.CreatedAt, f => f.Date.Recent())
                 .RuleFor(r => r.Price, f => f.Random.Double(50, 1000))
                 .RuleFor(r => r.CheckInDate, f => f.Date.Between(new DateTime(2020, 1, 1), new DateTime(2022, 12, 31)))
                 .RuleFor(r => r.CheckOutDate, (f, r) => f.Date.Between(r.CheckInDate, r.CheckInDate.AddDays(f.Random.Int(1, 14))))
                 .RuleFor(r => r.CurrencyType, f => f.PickRandom<CurrencyType>())
                 .RuleFor(r => r.Commission, f => f.Random.Double(0, 15).OrNull(f, .5f))
-                .RuleFor(r => r.Source, f => f.Random.String(12).OrNull(f, .5f));
+                .RuleFor(r => r.Source, f => f.Lorem.Word().OrNull(f, .5f));
 
             var guests = guestGenerator.Generate(20);
             //For future method

@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Bogus, Version=33.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
       <HintPath>packages\Bogus.33.0.2\lib\net40\Bogus.dll</HintPath>
     </Reference>
@@ -165,12 +168,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\GuestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\HostelContext.cs" />
+    <Compile Include="Dtos\Guests\GetGuestDto.cs" />
+    <Compile Include="Dtos\Guests\GetGuestWithReservationsDto.cs" />
+    <Compile Include="Dtos\Reservations\GetReservationDto.cs" />
+    <Compile Include="Dtos\Reservations\GetReservationWithGuestsDto.cs" />
+    <Compile Include="Dtos\Reservations\PostReservationDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AutomapperWebProfile.cs" />
     <Compile Include="Helpers\Enums\CurrencyType.cs" />
     <Compile Include="Migrations\202108101630008_Initial.cs" />
     <Compile Include="Migrations\202108101630008_Initial.designer.cs">
@@ -189,6 +200,8 @@
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GuestRepository.cs" />
+    <Compile Include="Repositories\ReservationRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -243,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Guest\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
