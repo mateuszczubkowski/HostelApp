@@ -15,7 +15,7 @@ namespace HostelApp.Dtos.Reservations
         public double Price { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
-        public CurrencyType CurrencyType { get; set; }
+        public string CurrencyType { get; set; }
         public double? Commission { get; set; }
         public string Source { get; set; }
     }
